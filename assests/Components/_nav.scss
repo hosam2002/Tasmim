@@ -1,0 +1,143 @@
+.nav {
+
+    display: none;
+    @include respond (break-785) { display: block; }
+
+    &__button {
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1000;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 4rem;
+        height: 4rem;
+
+        background-color: transparent;
+        border-radius: 5px;
+
+        cursor: pointer;
+    }
+
+    &__checkbox { display: none; }
+
+    /* hamburger */
+
+    &__hamburger {
+
+        display: inline-block;
+
+        width: 100%;
+        height: .4rem;
+
+        background-color: $bg-slate-700;
+        border-radius: 2px;
+
+        position: relative;
+
+        &::after,
+        &::before {
+
+            position: absolute;
+
+            content: "";
+
+            width: 80%;
+            background-color: $bg-slate-700;
+
+            /* inheritance */
+
+            height: inherit;
+            border-radius: inherit;
+        }
+
+        &::after { top: 10px }
+        &::before { top: -10px }
+    }
+}
+
+/* nav open / close technique */
+
+.nav {
+    
+    &__checkbox:checked ~ &__button &__hamburger {
+        
+        background-color: transparent;
+
+        &::after,
+        &::before { top: 0; }
+
+        &::after { transform: rotate(135deg); }
+        &::before { transform: rotate(-135deg); }
+    }
+}
+
+/* nav menu */
+
+.nav {
+
+    &__menu {
+
+        margin-left: -25rem; // to be changed by JavaScript
+
+        padding: 3rem;
+
+        position: fixed;
+
+        width: 25rem;
+        height: 100vh;
+
+        background-color: $bg-white;
+        border-right: 1px solid $bg-grey-200;
+
+        z-index: 1000;
+
+        transition: margin .4s ease-in-out;
+
+        @include shadow-lg;
+    }
+
+    &__list {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &--link {
+
+            display: inline-block;
+            width: 100%;
+            padding-bottom: 1.5rem;
+            
+            color: $bg-slate-800;
+            text-decoration: none;
+
+            background-color: transparent;
+            border-bottom: 1px solid $bg-grey-200;
+
+            font-size: 1.7rem;
+
+            &:not(:last-child) { margin-bottom: 1rem; }
+            &:nth-child(even) { font-weight: 600; }
+        }
+    }
+
+    &__disable {
+
+        display: none; // to be changed by JavaScript
+
+        position: fixed;
+        right: 0;
+        z-index: 999;
+
+        width: calc(100% - 25rem);
+        height: 100vh;
+
+        background-color: transparent;
+    }
+}

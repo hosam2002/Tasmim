@@ -1,0 +1,96 @@
+.home {
+
+    width: 100%;
+    min-height: 50rem;
+
+    background-image: linear-gradient(to top, $bg-cyan-300, $bg-blue-400);
+
+}
+
+.home {
+
+    &__content {
+
+        @include respond (break-510) { padding: 3rem; }
+
+        padding: 6.5rem;
+        text-align: left;
+        color: $bg-white;
+
+        &--caption {
+
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        &--heading {
+
+            font-size: 3.8rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+        }
+
+        &--body {
+
+            @include respond (break-865) {
+
+                width: 100%;
+            }
+
+            width: 50%;
+
+            font-weight: 600;
+            font-size: 1.8rem;
+
+            line-height: 1.5;
+        }
+    }
+
+    &__link {
+
+        width: 100%;
+        margin-top: 2.5rem;
+
+        &--btn {
+
+            position: relative;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 15rem;
+            height: 5rem;
+
+            background-color: transparent; //$bg-pink-500;
+            border: 3px solid $bg-white;
+            border-radius: 5px;
+    
+            text-decoration: none;
+    
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: $bg-white;
+
+            transition: transform .4s ease-in-out;
+
+            &::before {
+
+                content: "";
+    
+                position: absolute;
+                top: 1.5rem;
+                left: 1.5rem;
+    
+                width: 15rem;
+                height: 5rem;
+    
+                border-radius: 5px;
+                background-color: transparent;
+            }
+
+            &:hover { transform: translateY(-4px); }
+            &:active { transform: translateY(0); }
+        }
+    }
+}

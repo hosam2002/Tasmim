@@ -1,0 +1,25 @@
+[class$="--subtitle"] {
+
+    font-size: 2rem; 
+    font-weight: 400; 
+    font-style: italic; 
+    color: $bg-yellow-700;
+}
+
+[class$="--title"] {
+
+    font-size: 2.6rem; 
+    color: $bg-slate-700;
+
+    & > span { font-weight: 800; font-style: italic; text-decoration: underline;}
+}
+
+.related {
+
+    &__blue { background-color: $bg-blue-200 !important; }
+    &__pink { background-color: $bg-pink-200 !important; }
+    &__yellow { background-color: $bg-yellow-200 !important; }
+    &__sky { background-color: $bg-sky-200 !important; }
+    &__green { background-color: $bg-green-200 !important; }
+    &__lime { background-color: $bg-lime-200 !important; }
+}

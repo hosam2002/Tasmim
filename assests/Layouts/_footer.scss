@@ -1,0 +1,109 @@
+footer {
+
+    @include respond (break-570) { padding: 2.5rem; }
+
+    margin-top: 10rem;
+
+    width: 100%;
+    padding: 5rem;
+
+    background-color: transparent;
+    border-top: 1px solid $bg-grey-200;
+}
+
+.footer {
+
+    &__logo {
+
+        width: 100%;
+        background-color: transparent;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        &--img {
+
+            @include respond (break-510) { width: 6.5rem; }
+            width: 8rem;
+        }
+
+        &--name {
+
+            @include respond (break-510) { font-size: 2.4rem; }
+
+            margin-left: 1.5rem;
+            font-size: 2.6rem;
+
+            & > span { font-weight: 700; }
+        }
+    }
+
+    &__description {
+
+        @include respond (break-970) { width: 100%;}
+        @include respond (break-510) { font-size: 1.8rem; }
+        @include respond (break-410) { font-size: 1.6rem; }
+
+        margin-top: .5rem;
+        background-color: transparent;
+
+        width: 60%;
+
+        line-height: 1.55;
+        font-size: 2rem;
+    }
+
+    &__links {
+
+        margin-top: 2.5rem;
+        background-color: transparent;
+
+        @include respond (break-600) {
+
+            text-align: center;
+        }
+    }
+
+    &__link {
+
+        @include respond (break-510) { font-size: 1.4rem; }
+        @include respond (break-410) { font-size: 1.2rem; }
+
+        display: inline-block;
+
+        font-size: 1.7rem;
+        font-weight: 600;
+
+        padding: .85rem 1.5rem;
+        background-color: $bg-amber-300;
+        transition: transform .4s;
+        transform: skewX(-12deg);
+
+        text-decoration: none;
+        color: $bg-amber-900;
+        
+        &:not(:last-child) { 
+
+            @include respond (break-410) { margin-right: .5rem; }            
+            margin-right: 1.5rem; 
+        }
+
+        &:hover { transform: translateY(-4px) skewX(-12deg); }
+        &:active { transform: translateY(4px) skewX(-12deg)  }
+    }
+
+    &__copyrights {
+
+        @include respond (break-640) { font-size: 1.4rem; }
+        @include respond (break-410) { line-height: 2rem; }
+
+        margin-top: 2.5rem;
+
+        background-color: transparent;
+        font-size: 1.6rem;
+        text-align: center;
+
+        & > span { font-weight: 700; }
+    }
+}
