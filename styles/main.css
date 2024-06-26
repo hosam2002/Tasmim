@@ -52,6 +52,15 @@ body {
   background-color: rgb(217, 249, 157) !important;
 }
 
+.bold {
+  font-weight: 600;
+}
+
+.bold-italic {
+  font-weight: 600;
+  font-style: italic;
+}
+
 .btn, .btn:link, .btn:active {
   display: inline-block;
   padding: 1rem 4.5rem;
@@ -364,6 +373,9 @@ footer {
     font-size: 1.6rem;
   }
 }
+.footer__description > span {
+  font-weight: 500;
+}
 .footer__links {
   margin-top: 2.5rem;
   background-color: transparent;
@@ -446,7 +458,7 @@ footer {
 }
 .home__content--caption {
   font-size: 1.6rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .home__content--heading {
   font-size: 3.8rem;
@@ -455,7 +467,7 @@ footer {
 }
 .home__content--body {
   width: 50%;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.5;
 }
@@ -463,6 +475,10 @@ footer {
   .home__content--body {
     width: 100%;
   }
+}
+.home__content--body > span {
+  font-weight: 800;
+  font-style: italic;
 }
 .home__link {
   width: 100%;

@@ -52,6 +52,8 @@ footer {
 
         line-height: 1.55;
         font-size: 2rem;
+
+        & > span { font-weight: 500; }
     }
 
     &__links {
