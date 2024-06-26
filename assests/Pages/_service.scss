@@ -27,7 +27,7 @@
 
         display: grid;
         grid-template-columns: repeat(2, 30rem);
-        grid-template-rows: repeat(auto, 35rem);
+        grid-template-rows: repeat(auto, 54rem);
 
         justify-content: center;
         gap: 3.5rem;
@@ -38,9 +38,9 @@
         position: relative;
 
         width: 30rem;
-        height: 35rem;
+        height: 54rem;
 
-        border: 1px solid $bg-grey-200;
+        border: 1px solid $bg-rose-100;
         border-radius: 10px;
 
         overflow: hidden;
@@ -48,58 +48,54 @@
         background-color: $bg-white;
 
         @include shadow-xl;
+    }
 
-        &--img {
+    &__img {
 
-            width: 100%;
-            height: 15rem;
+        width: 100%;
+        height: 18rem;
 
-            background-color: $bg-grey-050;
+        background-color: transparent;
+        border-bottom: 1px solid $bg-rose-100;
 
-            overflow: hidden;
+        overflow: hidden;
 
-            & > img { width: 100%; }
-        }
+        & > img { width: 100%; }
+    }
 
-        &--heading {
+    &__heading {
 
-            margin-top: 2.5rem;
+        margin-top: 2.5rem;
 
-            font-size: 2.4rem;
-            font-weight: 600;
+        font-size: 2.4rem;
+        font-weight: 400;
 
-            text-align: center;
-        }
+        text-align: center;
+    }
 
-        &--footer {
+    &__related {
 
-            width: 100%;
-            padding: 1.5rem 0;
-            background-color: transparent;
+        margin-top: 3rem;
+        padding: 0 2.5rem;
 
-            text-align: center;
+        background-color: transparent;
 
-            position: absolute;
-            bottom: 2.5rem;
+        font-size: 1.4rem;
+    }
 
-            color: $bg-yellow-900;
+    &__list {
 
-            & > a {
+        list-style: none;
 
-                display: inline-block;
-                padding: 1.5rem 2.5rem;
-                background-color: rgba($bg-yellow-500, .5);
-                border-radius: 5px;
+        &--item {
 
-                font-weight: 700;
-                font-size: 1.8rem;
-                text-decoration: none;
-                color: inherit;
+            &:not(:last-child) { margin-bottom: 2.5rem; }
 
-                transition: transform .4s;
+            & > span {
 
-                &:hover { transform: translateY(-4px); }
-                &:active { transform: translateY(0);}
+                padding: .75rem .85rem;
+                background-color: $bg-pink-100;
+                border-radius: 3px;
             }
         }
     }

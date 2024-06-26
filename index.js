@@ -35,3 +35,67 @@ disable.addEventListener(`click`, (e) => {
     e.preventDefault()
 
 })
+
+//
+
+const cards = document.getElementById(`cards`)
+const popup = document.getElementById(`popup`)
+const popup_content = document.getElementById(`popup_content`)
+const popup_close = document.getElementById(`popup_close`)
+
+//
+
+cards.addEventListener(`click`, (event) => {
+
+    const target = event.target
+    const id = target.id
+
+    /*
+    if (id) {
+
+        const arr = id.split("-")
+        const idNo = arr[1]
+
+        document.getElementById(`reqbtn-${idNo}`).addEventListener(`click`, () => {
+
+            popup.style.display = "flex";
+            setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400)
+        })
+    }
+    */
+
+    if (id == `reqbtn-0`) {
+
+        popup.style.display = "flex";
+        setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400)
+
+    } else if (id == `reqbtn-1`) {
+
+        popup.style.display = "flex";
+        setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400) 
+
+    } else if (id == `reqbtn-2`) {
+
+        popup.style.display = "flex";
+        setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400)
+    }
+})
+
+//
+
+popup.addEventListener(`click`, (event)=> {
+
+    if (event.target.id == `popup`) {
+
+        popup_content.style.marginBottom = "-400rem";
+        setTimeout(() => { popup.style.display = `none`; }, 400)
+    } 
+})
+
+//
+
+popup_close.addEventListener(`click`, ()=> {
+    
+    popup_content.style.marginBottom = "-400rem";
+    popup.style.display = `none`;
+})

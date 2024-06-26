@@ -7,12 +7,34 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./icons/bootstrap-icons.css">
         <link rel="stylesheet" href="./styles/main.css">
         <title> Tasmim </title>
 
     </head>
 
     <body>
+
+        <!-- popup start -->
+
+        <div class="popup" id="popup">
+
+            <div class="popup__content" id="popup_content">
+
+                <div class="popup__content--heading">Do you want this service?</div>
+                <div class="popup__content--desc">
+                    Once you click <span>Confirm</span> you will be redirected to <span>WhatsApp</span> chat, show your
+                    interest and then briefly explain how your wanted service should be like, and I will reply to you
+                    in short time to approve your request and talk about other details.
+                </div>
+
+                <a href="https://wa.me/249124375312" target="_blank" class="popup__button" id="popup_close"> Confirm </a>
+
+            </div>
+
+        </div>
+
+        <!-- popup end -->
 
         <!-- nav menu start -->
 
@@ -143,17 +165,45 @@
 
                 <div class="service__card">
 
-                    <div class="service__card--img"> <img src="./img/programming-0.jpg"> </div>
-                    <div class="service__card--heading"> Web Development </div>
-                    <div class="service__card--footer"> <a href="#" class="service__card--link"> View my Work </a> </div>
+                    <div class="service__img"> <img src="./img/programming-1.jpg"> </div>
+                    <div class="service__heading"> Web <span class="bold">Development</span></div>
+
+                    <div class="service__related">
+
+                        <ul class="service__list">
+                            
+                            <li class="service__list--item"> <span class="related__violet">Frontend</span> </li>
+                            <li class="service__list--item"> <span class="related__lime">User Interface Design</span> </li>
+                            <li class="service__list--item"> <span class="related__green">User Experience</span> </li>
+                            <li class="service__list--item"> <span class="related__amber">Static</span> </li>
+                            <li class="service__list--item"> <span class="related__pink">Interactive</span> </li>
+                            <li class="service__list--item"> <span class="related__sky">Responsive</span> </li>
+
+                        </ul>
+
+                    </div>
 
                 </div>
 
                 <div class="service__card">
 
-                    <div class="service__card--img"> <img src="./img/graphic-0.jpg"> </div>
-                    <div class="service__card--heading"> Graphic Design </div>
-                    <div class="service__card--footer"> <a href="#" class="service__card--link"> View my Work </a> </div>
+                    <div class="service__img"> <img src="./img/graphic-0.jpg"> </div>
+                    <div class="service__heading"> Graphic <span class="bold">Design</span> </div>
+
+                    <div class="service__related">
+
+                        <ul class="service__list">
+                            
+                            <li class="service__list--item"> <span class="related__lime">Curriculum Vitae</span> </li>
+                            <li class="service__list--item"> <span class="related__amber">Posters</span> </li>
+                            <li class="service__list--item"> <span class="related__rose">Book</span> </li>
+                            <li class="service__list--item"> <span class="related__green">Book Cover</span> </li>
+                            <li class="service__list--item"> <span class="related__pink">Covers</span> </li>
+                            <li class="service__list--item"> <span class="related__yellow">Stickers</span> </li>
+
+                        </ul>
+
+                    </div>
 
                 </div>                
 
@@ -172,34 +222,50 @@
                 <div class="offers__header--title">Make your choice now</div>
             </div>
 
-            <div class="offers__grid">
+            <div class="offers__grid" id="cards">
 
                 <!-- card 1 start -->
 
                 <div class="offers__card">
 
-                    <div class="offers__card--img"> <img src="./img/webdesign-1.jpg"> </div>
-                    <div class="offers__card--heading"> Web Development </div>
+                    <div class="offers__img"> <img src="./img/webdesign-1.jpg"> </div>
 
-                    <div class="offers__card--related">
+                    <div class="offers__heading"> Frontend </div>
 
-                        <span class="related__pink">Frontend</span>
-                        <span class="related__yellow">Web Design</span>
-                        <span class="related__sky">Static</span>
-                        <span class="related__green">Modern Pages</span>
-                        <span class="related__blue">Portfolio</span>
-                        <span class="related__pink">Responsive</span>
+                    <div class="offers__body">
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Static </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Fully Responsive </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Vanilla CSS with SASS </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Vanilla JavaScript or React.JS</div>
+                        </div>
 
                     </div>
 
-                    <div class="offers__card--footer"> 
+                    <div class="offers__footer"> 
 
-                        <a href="#" class="offers__card--link"> My Work </a> 
-                        <a href="https://wa.me/249124375312" target="_blank" class="offers__card--link"> Hire </a>
+                        <a href="https://dev-hosam-moh.netlify.app/#section-projects" target="_blank" 
+                        class="offers__link"> My Work </a> 
+                        
+                        <button class="offers__link" id="reqbtn-0">Request</button>
                         
                     </div>
 
-                    <div class="offers__card--price"> 9,999 SDG </div>
+                    <div class="offers__price"> 9,999 SDG </div>
 
                 </div>
 
@@ -209,28 +275,46 @@
 
                 <div class="offers__card">
 
-                    <div class="offers__card--img"> <img src="./img/cvdesign-0.jpg"> </div>
-                    <div class="offers__card--heading"> Curriculum Vitae </div>
+                    <div class="offers__img"> <img src="./img/cvdesign-0.jpg"> </div>
+                    <div class="offers__heading"> Curriculum Vitae </div>
 
-                    <div class="offers__card--related">
+                    <div class="offers__body">
 
-                        <span class="related__pink">Professional</span>
-                        <span class="related__yellow">Beautiful</span>
-                        <span class="related__lime">CV</span>
-                        <span class="related__sky">Illustrator</span>
-                        <span class="related__green">PDF</span>
-                        <span class="related__yellow">High Quality</span>
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> High Quality </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Delived in PDF </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Detailed Sections </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Eurpoean </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> ATS Resumes </div>
+                        </div>
 
                     </div>
 
-                    <div class="offers__card--footer"> 
+                    <div class="offers__footer"> 
                         
-                        <a href="#" class="offers__card--link"> My Work </a>                         
-                        <a href="https://wa.me/249124375312" target="_blank" class="offers__card--link"> Hire </a>
+                        <a href="./pages/graphicpage.html" class="offers__link"> My Work </a>
+                        <button class="offers__link" id="reqbtn-1">Request</button>
                     
                     </div>
 
-                    <div class="offers__card--price"> 4,499 SDG</div>
+                    <div class="offers__price"> 4,499 SDG</div>
 
                 </div>
 
@@ -240,28 +324,41 @@
 
                 <div class="offers__card">
 
-                    <div class="offers__card--img"> <img src="./img/posters-0.jpg"> </div>
-                    <div class="offers__card--heading"> Posters </div>
+                    <div class="offers__img"> <img src="./img/posters-0.jpg"> </div>
+                    <div class="offers__heading"> Posters </div>
 
-                    <div class="offers__card--related">
+                    <div class="offers__body">
 
-                        <span class="related__pink">Professional</span>
-                        <span class="related__yellow">Beautiful</span>
-                        <span class="related__lime">Social Media</span>
-                        <span class="related__sky">Illustrator</span>
-                        <span class="related__green">JPG / PNG</span>
-                        <span class="related__yellow">High Quality</span>
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> High Quality </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Delivered in PNG/JPG </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> New Ideas </div>
+                        </div>
+
+                        <div class="offers__related">
+                            <div class="offers__related--icon"> <i class="bi-check2-circle"></i> </div>
+                            <div class="offers__related--text"> Suitable Sizes </div>
+                        </div>
 
                     </div>
 
-                    <div class="offers__card--footer"> 
+                    <div class="offers__footer"> 
                     
-                        <a href="#" class="offers__card--link"> My Work </a>                         
-                        <a href="https://wa.me/249124375312" target="_blank" class="offers__card--link"> Hire </a>
+                        <a href="#" class="offers__link"> My Work </a>
+                        <button class="offers__link" id="reqbtn-2">Request</button>
                 
                     </div>
 
-                    <div class="offers__card--price"> 4,499 SDG</div>
+                    <div class="offers__price"> 4,499 SDG</div>
 
                 </div>
 

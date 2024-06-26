@@ -16,12 +16,25 @@
 
 .related {
 
+    display: inline-block;
+
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    padding: .45rem .5rem;
+    background-color: $bg-pink-100;
+
+    &:not(:last-child) { margin-right: .5rem; margin-bottom: .5rem;}
+
     &__blue { background-color: $bg-blue-200 !important; }
     &__pink { background-color: $bg-pink-200 !important; }
     &__yellow { background-color: $bg-yellow-200 !important; }
     &__sky { background-color: $bg-sky-200 !important; }
     &__green { background-color: $bg-green-200 !important; }
     &__lime { background-color: $bg-lime-200 !important; }
+    &__amber { background-color: $bg-amber-200 !important; }
+    &__violet { background-color: $bg-violet-200 !important; }
+    &__rose { background-color: $bg-rose-200 !important; }
 }
 
 //

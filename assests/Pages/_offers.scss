@@ -30,7 +30,7 @@
 
         display: grid;
         grid-template-columns: repeat(3, 30rem);
-        grid-template-rows: repeat(auto, 45rem);
+        grid-template-rows: repeat(auto, 55rem);
 
         justify-content: center;
         gap: 3.5rem
@@ -41,10 +41,10 @@
         position: relative;
 
         width: 30rem;
-        height: 45rem;
+        height: 55rem;
 
         background-color: $bg-white;
-        border: 1px solid $bg-grey-200;
+        border: 1px solid $bg-rose-100;
         border-radius: 10px;
 
         overflow: hidden;
@@ -52,92 +52,103 @@
         @include shadow-sm;
     }
 
-    &__card {
+    &__img {
 
-        &--img {
+        width: 100%;
+        height: 20rem;
 
-            width: 100%;
-            height: 20rem;
+        overflow: hidden;
 
-            overflow: hidden;
+        & > img { width: 100%; }
+    }
 
-            & > img { width: 100%; }
-        }
+    &__heading {
 
-        &--heading {
+        margin-top: 2.5rem;
+        font-size: 2.4rem;
+        font-weight: 600;
 
-            margin-top: 2.5rem;
-            font-size: 2.4rem;
-            font-weight: 600;
+        text-align: center;
+    }
 
-            text-align: center;
-        }
+    &__body {
 
-        &--related {
+        margin-top: 2.5rem;
+        padding: 0 2rem;
+    }
 
-            margin-top: 2.5rem;
-            padding: 0 2rem;
+    &__footer {
 
-            & > span {
+        width: 100%;
+        padding: 1.5rem 0;
+        background-color: transparent;
 
-                display: inline-block;
+        text-align: center;
 
-                font-size: 1.2rem;
-                font-weight: 500;
+        position: absolute;
+        bottom: 2.5rem;
+    }
 
-                padding: .45rem .5rem;
-                background-color: $bg-pink-100;
+    &__link {
 
-                &:not(:last-child) { margin-right: .5rem; margin-bottom: .5rem;}
-            }
-        }
+        outline: none;
+        border: none;
 
-        &--footer {
+        display: inline-block;
+        padding: 1rem 1.5rem;
+        border-radius: 3px;
 
-            width: 100%;
-            padding: 1.5rem 0;
-            background-color: transparent;
+        font-weight: 500;
+        font-size: 1.6rem;
+        text-decoration: none;
 
-            text-align: center;
+        transition: transform .4s;
 
-            position: absolute;
-            bottom: 2.5rem;
-        }
+        &:hover { transform: translateY(-4px); }
+        &:active { transform: translateY(0);}
+        &:not(:last-child) { margin-right: .5rem; }
 
-        &--link {
+        &:first-child { background-color: rgba($bg-yellow-500, .5); color: $bg-yellow-900;}
+        &:last-child { background-color: $bg-green-400; color: $bg-lime-900; }
+    }
 
-            display: inline-block;
-            padding: 1rem 1.5rem;
-            border-radius: 3px;
+    &__price {
 
-            font-weight: 500;
-            font-size: 1.6rem;
-            text-decoration: none;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
 
-            transition: transform .4s;
+        padding: .5rem 1.5rem;
 
-            &:hover { transform: translateY(-4px); }
-            &:active { transform: translateY(0);}
-            &:not(:last-child) { margin-right: .5rem; }
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $bg-black;
 
-            &:first-child { background-color: rgba($bg-yellow-500, .5); color: $bg-yellow-900;}
-            &:last-child { background-color: $bg-lime-500; color: $bg-lime-900; }
-        }
+        border-radius: 4px;
+        background-color: $bg-white;
+    }
+}
 
-        &--price {
+/* update v0.2 > related */
 
-            position: absolute;
-            top: 1.5rem;
-            left: 1.5rem;
+.offers {
 
-            padding: .5rem 1.5rem;
+    &__related {
 
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: $bg-white;
+        display: flex;
+        justify-content: flex-start;
 
-            border-radius: 4px;
-            background-color: $bg-red-500;
+        background-color: transparent;
+
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        & > div:not(:last-child) { margin-right: 1.15rem; }
+        &:not(:last-child) { margin-bottom: 1.15rem; }
+
+        &--icon {
+
+            & > i { color: $bg-green-500; }
         }
     }
 }
