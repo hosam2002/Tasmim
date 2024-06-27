@@ -1,14 +1,16 @@
 [class$="--subtitle"] {
 
     font-size: 2rem; 
-    font-weight: 400; 
+    font-weight: 700; 
     font-style: italic; 
-    color: $bg-yellow-700;
+    color: $bg-amber-700;
 }
 
 [class$="--title"] {
 
-    font-size: 2.6rem; 
+    font-size: 2.6rem;
+    font-style: italic; 
+    font-weight: 400;
     color: $bg-slate-700;
 
     & > span { font-weight: 800; font-style: italic; text-decoration: underline;}

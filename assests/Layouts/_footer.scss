@@ -78,7 +78,7 @@ footer {
         font-weight: 600;
 
         padding: .85rem 1.5rem;
-        background-color: $bg-amber-300;
+        background-color: $bg-amber-200;
         transition: transform .4s;
         transform: skewX(-12deg);
 
@@ -88,7 +88,7 @@ footer {
         &:not(:last-child) { 
 
             @include respond (break-410) { margin-right: .5rem; }            
-            margin-right: 1.5rem; 
+            margin-right: 1rem; 
         }
 
         &:hover { transform: translateY(-4px) skewX(-12deg); }

@@ -1,0 +1,18 @@
+.litem {
+
+    display: flex;
+    justify-content: flex-start;
+
+    background-color: transparent;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    & > div:not(:last-child) { margin-right: 1.15rem; }
+    &:not(:last-child) { margin-bottom: 1.15rem; }
+
+    &__icon {
+
+        & > i { color: $bg-green-600; }
+    }
+}

@@ -78,6 +78,11 @@ cards.addEventListener(`click`, (event) => {
 
         popup.style.display = "flex";
         setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400)
+        
+    } else if (id == `reqbtn-3`) {
+
+        popup.style.display = "flex";
+        setTimeout(() => { popup_content.style.marginBottom = "0"; }, 400)
     }
 })
 
